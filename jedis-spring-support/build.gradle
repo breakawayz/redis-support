@@ -1,0 +1,33 @@
+group 'com.zhangyx.hw'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.8
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'redis.clients', name: 'jedis', version: '2.9.0'
+    compile group: 'org.springframework', name: 'spring-core', version: '4.2.7.RELEASE'
+    compile group: 'org.springframework', name: 'spring-context', version: '4.2.7.RELEASE'
+    compile group: 'org.springframework', name: 'spring-context-support', version: '4.2.7.RELEASE'
+    compile group: 'org.springframework', name: 'spring-beans', version: '4.2.7.RELEASE'
+    compile group: 'org.springframework', name: 'spring-expression', version: '4.2.7.RELEASE'
+    compile group: 'com.google.guava', name: 'guava', version: '23.0'
+
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.16.18'
+    compile group: 'commons-configuration', name: 'commons-configuration', version: '1.10'
+    compile group: 'commons-logging', name: 'commons-logging', version: '1.2'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.6'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    compile group: 'ch.qos.logback', name: 'logback-core', version: '1.2.3'
+
+    testCompile group: 'org.springframework', name: 'spring-test', version: '4.2.7.RELEASE'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
